@@ -1,0 +1,102 @@
+/*Global*/
+
+.spa-content {
+  width: 100%;
+  min-height: 480px;
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+
+
+  border: 1px solid black; /*remove later*/
+  /*margin: 100px;*/
+}
+
+header {
+  width: 100%;
+  /*position: fixed;*/
+  background-color: #16a085;
+  color: white;
+  padding-bottom: 5%;
+  /*float: left;*/
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 1em;
+}
+
+.add-appt {
+  font-family: inherit;
+  font-size: 1.1em;
+  display: inline;
+  color: white;
+  background-color: #16a085;
+  text-shadow: none;
+  border: none;
+  cursor: pointer;
+  padding: 1em .5em;
+  outline: none;
+}
+
+.add-appt:hover {
+  background-color: #1abc9c;
+}
+
+
+/*Panel 1*/
+
+.add-appt {
+}
+
+.appt-listing {
+  max-width: 90%;
+  background-color: #80CBC4;
+  padding: 5%;
+  /*float: left;*/
+}
+
+.appt-listing button {
+  /*float: right;*/
+}
+
+/*Panel 2*/
+
+.add-appointment {
+  padding: 0 5%;
+}
+
+.add-appointment label {
+  display: block;
+  margin-top: 1%;
+}
+
+.add-appointment input {
+  width: 100%;
+}
+
+.add-appointment button {
+  width: 100%;
+  margin-top: 1%;
+}
+
+
+
+
+/*Panel 3*/
+
+.detail {
+  padding-top: 2%;
+}
+
+.detail li {
+  padding: 1%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.weather {
+  width: 100%;
+  /*margin: 0 auto;*/
+  text-align: center;
+}
