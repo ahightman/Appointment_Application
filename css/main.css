@@ -26,7 +26,7 @@ h1 {
   padding-top: 1em;
 }
 
-.add-appt {
+.add-appt-button {
   font-family: inherit;
   font-size: 1.1em;
   display: inline;
@@ -39,14 +39,14 @@ h1 {
   outline: none;
 }
 
-.add-appt:hover {
+.add-appt-button:hover {
   background-color: #1abc9c;
 }
 
 
 /*Panel 1*/
 
-.add-appt {
+.add-appt-button {
 }
 
 .appt-listing {
@@ -62,20 +62,20 @@ h1 {
 
 /*Panel 2*/
 
-.add-appointment {
+.add-form {
   padding: 0 5%;
 }
 
-.add-appointment label {
+.add-form label {
   display: block;
   margin-top: 1%;
 }
 
-.add-appointment input {
+.add-form input {
   width: 100%;
 }
 
-.add-appointment button {
+.add-form button {
   width: 100%;
   margin-top: 1%;
 }
