@@ -1,14 +1,24 @@
-$(function() {
-  var page1Html = $('#page1').html();
-  var page2Html = $('#page2').html();
 
-    $('.spa-content').html(page1Html);
+var app = {};
 
-    $('.spa-content').on('click', '.add-appt-button', function () {
-      $('.spa-content').html(page2Html);
-    });
 
-    $('.spa-content').on('click', '.back-to-page1', function () {
-      $('.spa-content').html(page1Html);
-    });
-});
+
+
+
+
+
+
+
+
+
+
+//
+// //TO get API
+//   // var req = $.getJSON('url');
+//   //   req.done(function (data) {
+//   //     console.log(data) ..or data.name
+//   // });
+//   //
+//   // req.fail(function(req, status, err) {
+//   //   console.log('Failed to talk to Github: ' + err);
+//   // });

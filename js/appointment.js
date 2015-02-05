@@ -1,7 +1,6 @@
 
-
 //Constructor Function to create new appointment object
-function Appointment(spec) {
+app.Appointment = function (spec) {
   if (!spec.title || spec.title.trim() === '') {
     throw 'Please include a title';
   }
@@ -13,6 +12,7 @@ function Appointment(spec) {
     address: spec.address,
     location: spec.location
 
+    // id: spec.id
   };
 
   return self;

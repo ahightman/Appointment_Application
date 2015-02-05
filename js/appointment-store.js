@@ -1,20 +1,33 @@
 
 //Constructor Function to create object store of appointments
-function AppointmentStore() {
-  var collection = [];
+app.AppointmentStore = function () {
+  var appointments = [];
 
   var self = {
+    add: function (appt) {
+      appointments.push(appt);
+      return true;
+      // self.save();
+    },
 
-    add: function(obj) {
-        collection.push(obj);
-        return true;
-      },
+    query: function () {
+      return appointments;
+    },
 
-    query: function() {
-      return collection;
-    }
+    remove: function (appt) {
+      appointments = appointments.filter(function (item) {
+        return item.id !== appt.id;
+      });
+    },
 
+    // load: function () {
+    //   appointments = JSON.parse(localStorage.getItem('appts')) || [];
+    // },
+    //
+    // save: function () {
+    //   localStorage.setItem('appts', JSON.stringify(appointments));
+    // }
   };
 
   return self;
-}
+};

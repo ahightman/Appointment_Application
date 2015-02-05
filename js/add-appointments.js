@@ -1,38 +1,32 @@
-  $(function() {
+$(function() {
 
+  app.showAddPage = function () {
+    var page2Html = $('#page2').html();
+    $('.spa-content').html(page2Html);
 
-    $('.add-form').on('submit', function () {
-    addAppt();
-    resetForm();
+    $('.add-form').submit(function () {
+      var newAppt = app.Appointment ({
+        title: $('.input-title').val(),
+        date: $('.input-date').val(),
+        time: $('.input-time').val(),
+        address: $('.input-street').val(),
+        location: $('.input-city-state').val()
+        // id:
+      });
 
-    return false;
+      app.AppointmentStore().add(newAppt);
 
-  });
+      app.showListScreen();
 
-    // drawAppts();
+      // app.resetForm()
 
-
-
-  function addAppt() {
-    var newAppt = Appointment ({
-
-      title: $('.add-form .input-title').val(),
-      date: $('.add-form .input-date').val(),
-      time: $('.add-form .input-time').val(),
-      address: $('.add-form .input-address').val(),
-      location: $('.add-form .input-location').val()
-
+      return false;
     });
-
-    AppointmentStore().add(newAppt);
-  }
-
-  // Resets the inputs in the form
-  function resetForm() {
-    $('.add-form input').val('');
-    $('.add-form .input-title').focus();
-  }
+  };
 });
 
-
-      // $('.add-form').submit(function() {
+  // // Resets the inputs in the form
+  // app.resetForm = function() {
+  //   $('.add-form input').val('');
+  //   $('.add-form .input-title').focus();
+  // }
