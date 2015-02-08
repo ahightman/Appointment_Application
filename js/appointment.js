@@ -10,10 +10,9 @@ app.Appointment = function (spec) {
     date: spec.date,
     time: spec.time,
     address: spec.address,
-    location: spec.location
+    location: spec.location,
+    id: spec.id
 
-    // id: spec.id
-  };
-
+  }
   return self;
 }

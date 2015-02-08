@@ -14,17 +14,29 @@ Save/Back hides Panel 2 and takes me back to Panel 1-->
 
     <div class="spa-content"></div>
 
-      <script id="page1" type="text/html">
-        <div class="panel-1">
+      <script id="list-page" type="text/html">
+        <!-- <div class="panel-1"> -->
           <header>
             <h1>Appointments</h1>
             <button class="add-appt-button"> + ADD</button> <!--Link to create page (2)-->
           </header>
 
-          <div class="appt-listing">
-            <button class="delete-appt">DELETE</button>
-          </div>
-        </div>
+        <div class="wrapper"></div>
+
+          <script type="text/html" id="appt-listings">
+              <div class="templatediv">
+              <% m.appt.forEach(function (appt) { %>
+                <div class="<%-appt.id%>">
+                <span class="title"><%- appt.title %></span>
+                <span class="date"><%- appt.date %></span>
+                <span class="time"><%- appt.time %></span>
+                <span class="address"><%- appt.address %></span>
+                <span class="location"><%- appt.location %></span>
+                <span class="weather"></span>
+                <span class="deletelisting"></span>
+              <% }) %>
+            </div>
+          </script>
       </script>
 
 
@@ -105,10 +117,13 @@ Save/Back hides Panel 2 and takes me back to Panel 1-->
         </div>
       </script>
 
-    <script src="js/lib/jquery-2.1.3.min.js"></script>
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/lodash.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/appointment.js"></script>
     <script src="js/appointment-store.js"></script>
+    <script src="js/appointment.js"></script>
     <script src="js/list-appointments.js"></script>
     <script src="js/add-appointments.js"></script>
     <script src="js/init.js"></script>

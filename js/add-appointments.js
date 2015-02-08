@@ -10,23 +10,19 @@ $(function() {
         date: $('.input-date').val(),
         time: $('.input-time').val(),
         address: $('.input-street').val(),
-        location: $('.input-city-state').val()
-        // id:
+        location: $('.input-city-state').val(),
+        id: Math.floor((Math.random() * 100) + 1)
       });
 
-      app.AppointmentStore().add(newAppt);
+      app.appointments.add(newAppt);
 
-      app.showListScreen();
-
-      // app.resetForm()
+      try {
+        app.showListPage();
+      } catch (ex) {
+        console.log('WHatt>????? ' + ex);
+      }
 
       return false;
     });
   };
 });
-
-  // // Resets the inputs in the form
-  // app.resetForm = function() {
-  //   $('.add-form input').val('');
-  //   $('.add-form .input-title').focus();
-  // }
