@@ -7,26 +7,40 @@ app.AppointmentStore = function () {
     add: function (appt) {
       appointments.push(appt);
       return true;
-      // self.save();
+      self.save();
     },
 
     query: function () {
       return appointments;
     },
 
-    remove: function (appt) {
+    findById: function (apptId) {
+       appointments = appointments.filter(function (item) {
+        return item.id == apptId;
+      });
+
+      if(appointments.length > 0) {
+        return appointments[0];
+
+      } else {
+
+        return false;
+      }
+    },
+
+    remove: function (apptId) {
       appointments = appointments.filter(function (item) {
-        return item.id !== appt.id;
+        return item.id !== apptId;
       });
     },
 
-    // load: function () {
-    //   appointments = JSON.parse(localStorage.getItem('appts')) || [];
-    // },
-    //
-    // save: function () {
-    //   localStorage.setItem('appts', JSON.stringify(appointments));
-    // }
+    load: function () {
+      appointments = JSON.parse(localStorage.getItem('appts')) || [];
+    },
+
+    save: function () {
+      localStorage.setItem('appts', JSON.stringify(appointments));
+    }
   };
 
   return self;

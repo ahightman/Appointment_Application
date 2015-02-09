@@ -1,102 +1,148 @@
-/*Global*/
+/*GLOBAL*/
 
 .spa-content {
   width: 100%;
   min-height: 480px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #212121;
-
-
-  border: 1px solid black; /*remove later*/
-  /*margin: 100px;*/
 }
 
 header {
   width: 100%;
-  /*position: fixed;*/
   background-color: #16a085;
   color: white;
   padding-bottom: 5%;
-  /*float: left;*/
 }
 
-h1 {
-  text-align: center;
+.header-title {
   font-size: 2em;
-  padding-top: 1em;
+  margin-top: 5%;
+  margin-left: 20%;
+  display: inline-block;
 }
 
-.add-appt-button {
+.headerholder {
+  margin: 0 auto;
+  padding-top: 5%;
+  text-align: center;
+}
+
+button {
+  background-color: inherit;
   font-family: inherit;
-  font-size: 1.1em;
-  display: inline;
-  color: white;
-  background-color: #16a085;
+  font-size: inherit;
+  color: inherit;
   text-shadow: none;
   border: none;
   cursor: pointer;
-  padding: 1em .5em;
   outline: none;
 }
 
-.add-appt-button:hover {
-  background-color: #1abc9c;
+.icon {
+  font-family: 'appointment';
+  font-size: 2em;
 }
 
+/*APPOINTMENT LISTING PAGE*/
 
-/*Panel 1*/
+.delete-appt {
+  font-size: 1.3em;
+  display: inline-block;
+  float: right;
+  position: relative;
+  cursor: pointer;
+}
 
 .add-appt-button {
+  font-size: 2.2em;
+  float: right;
+  margin-top: 5%;
+  margin-right: 10%;
+}
+
+.indi-appt {
+  font-size: 1em;
+  width: 100%;
+  float: left;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+
+.indi-appt:hover {
+  cursor: pointer;
+}
+
+.indi-appt span {
+  margin: 1%;
+  float: left;
 }
 
 .appt-listing {
   max-width: 90%;
   background-color: #80CBC4;
   padding: 5%;
-  /*float: left;*/
 }
 
-.appt-listing button {
-  /*float: right;*/
+.modal {
+  font-size: .5em;
 }
 
-/*Panel 2*/
+/*ADD APPOINTMENT PAGE*/
 
 .add-form {
   padding: 0 5%;
 }
 
-.add-form label {
-  display: block;
-  margin-top: 1%;
-}
-
 .add-form input {
   width: 100%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: .5em;
+  margin-top: 1em;
+  font-size: 1em;
 }
 
-.add-form button {
+.save-button {
   width: 100%;
-  margin-top: 1%;
+  margin-top: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
+.save-button:hover {
+  background-color: #16a085;
+}
 
+.header-title-add {
+  font-size: 2em;
+  display: inline-block;
+  text-align: center;
+}
 
-
-/*Panel 3*/
+/*DETAILS PAGE*/
 
 .detail {
-  padding-top: 2%;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 1em;
 }
 
-.detail li {
-  padding: 1%;
+.detail span {
+  width: 100%;
+  padding: 2%;
   text-align: center;
   font-size: 1.5em;
+  display: block;
 }
 
-.weather {
-  width: 100%;
-  /*margin: 0 auto;*/
+.back-to-list {
+  font-size: inherit;
+  display: inline-block;
+}
+
+.header-title-detail {
+  font-size: 2em;
+  display: inline-block;
   text-align: center;
 }

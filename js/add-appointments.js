@@ -1,8 +1,10 @@
 $(function() {
 
   app.showAddPage = function () {
-    var page2Html = $('#page2').html();
-    $('.spa-content').html(page2Html);
+    var addPageHtml = $('#addpage').html();
+    $('.spa-content').html(addPageHtml);
+
+    $('.back-to-listpage').click(app.showListPage);
 
     $('.add-form').submit(function () {
       var newAppt = app.Appointment ({
@@ -15,12 +17,9 @@ $(function() {
       });
 
       app.appointments.add(newAppt);
+      app.appointments.save();
 
-      try {
-        app.showListPage();
-      } catch (ex) {
-        console.log('WHatt>????? ' + ex);
-      }
+      app.showListPage();
 
       return false;
     });
