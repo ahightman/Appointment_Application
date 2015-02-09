@@ -4,7 +4,6 @@ app.Appointment = function (spec) {
   if (!spec.title || spec.title.trim() === '') {
     throw 'Please include a title';
   }
-
   var self = {
     title: spec.title,
     date: spec.date,
@@ -12,7 +11,6 @@ app.Appointment = function (spec) {
     address: spec.address,
     location: spec.location,
     id: spec.id
-
   }
   return self;
 }

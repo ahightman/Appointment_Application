@@ -1,12 +1,10 @@
 $(function() {
 
   app.showListPage = function () {
-
     app.appointments.load();
 
     var listPageHtml = $('#list-page').html();
     $('.spa-content').html(listPageHtml);
-
     $('.add-appt-button').click(app.showAddPage);
 
     var apptListings = $('#appt-listings').html();

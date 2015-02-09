@@ -8,7 +8,7 @@ app.showDetailsPage = function (apptId) {
 
   $('.spa-content').html(template(
     app.appointments.findById(apptId)));
-
+    
   $('.back-to-list').click(app.showListPage);
 
     return false;
