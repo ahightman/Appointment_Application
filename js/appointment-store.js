@@ -16,10 +16,8 @@ app.AppointmentStore = function () {
        appointments = appointments.filter(function (item) {
         return item.id == apptId;
       });
-      if(appointments.length > 0) {
+      if(appointments.length) {
         return appointments[0];
-      } else {
-        return false;
       }
     },
     remove: function (apptId) {

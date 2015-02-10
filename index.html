@@ -25,12 +25,13 @@
               <ul class="templatediv">
               <% m.appt.forEach(function (appt) { %>
                 <li class="indi-appt" data-id="<%- appt.id %>">
-                  <span class="date"><%- appt.date %></span>
-                  <span class="time"><%- appt.time %></span>
-                  <span class="title"><%- appt.title %></span>
-                  <span class="address"><%- appt.address %></span>
-                  <span class="location"><%- appt.location %></span>
-                  <span class="weather"></span>
+                  <div class="date-time">
+                    <span class="date"><%- appt.date %></span>
+                    <span class="time"><%- appt.time %></span>
+                  </div>
+                  <div class="titlediv">
+                    <span class="title"><%- appt.title %></span>
+                  </div>
                   <button class="delete-appt"><span class="icon-cancel"></span></button>
               <% }) %>
                 </li>
@@ -59,35 +60,35 @@
       </script>
 
       <script id="details" type="text/html">
-        <div class="details-page">
-          <header>
-            <div class="headerholder">
-            <button class="back-to-list"><span class="icon icon-left-open"></span></button> <!--Link to page (1)-->
-            <h1 class="header-title-detail"><%-m.title %></h1>
-            </div>
-          </header>
-          <div class="detail">
-            <span class="detail-date"><%- m.date %></span>
-            <span class="detail-time"><%- m.time %></span>
-            <span class="detail-address"><%- m.address %></span>
-            <span class="detail-location"><%- m.location %></span>
+        <header>
+          <div class="headerholder">
+          <button class="back-to-list"><span class="icon icon-left-open"></span></button>
+          <h1 class="header-title-detail">Appointment Details</h1>
           </div>
-          <div class="weatherplaceholder"></div>
+        </header>
+        <div class="detail">
+          <span class="detail-date"><%-m.title %></span>
+          <span class="detail-date"><%- m.date %></span>
+          <span class="detail-time"><%- m.time %></span>
+          <span class="at">@</span>
+          <span class="detail-address"><%- m.address %></span>
+          <span class="detail-location"><%- m.location %></span>
+        </div>
+        <div class="weather">
+          <span>Currently:</span>
+          <div class="temp"></div>
+          <span>with</span>
+          <div class="conditions"></div>
+        </div>
       </script>
 
       <script id="modal" type="text/html">
         <div class="modal">
-          <span class="promptmessage"> Are you sure?
-          <button class="actual-delete"><span class="icon icon-cancel"></span>Delete</button>
-          <button class="cancel"><span class="icon icon-block"></span>Cancel</button>
-          </span>
+          <button class="actual-delete"><span class="icon icon-cancel"></span></button>
+          <button class="cancel"><span class="icon icon-block"></span></button>
         </div>
       </script>
-
-      <script id="weather" type="text/html">
-        <div class="holder"></div>
-      </script>
-
+      
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/lodash/lodash.min.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>

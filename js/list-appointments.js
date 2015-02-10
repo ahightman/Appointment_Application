@@ -21,14 +21,16 @@ $(function() {
 
     $('.indi-appt').on('click', '.delete-appt', function (e) {
       e.stopPropagation();
+      var theButton = $(this).closest('.delete-appt');
       var li = $(this).closest('li');
       var id = $(li).data('id');
       var modal = $($('#modal').html());
 
       $(li).append(modal);
+      $(theButton).hide();
 
       $('.actual-delete', modal).click(function (){
-        li.remove();
+        theButton.closest('li').remove();
         modal.remove();
         app.appointments.remove(id);
         app.appointments.save();
@@ -37,6 +39,7 @@ $(function() {
 
       $('.cancel').click(function(e){
         $(this).closest('.modal').remove();
+        $(theButton).show();
         e.stopPropagation();
       });
     });
