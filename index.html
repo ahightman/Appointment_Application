@@ -17,8 +17,9 @@
     <div class="spa-content"></div>
       <script id="list-page" type="text/html">
           <header>
+            <div class="headerdiv">
             <span class='header-title'>Appointments</span>
-            <button class="add-appt-button"><span class="icon-plus"></span></button> <!--Link to create page (2)-->
+            <button class="add-appt-button"><span class="icon-plus"></span></button>
           </header>
 
         <div class="wrapper"></div>
@@ -69,7 +70,7 @@
           </div>
         </header>
         <div class="detail">
-          <span class="detail-date"><%-m.title %></span>
+          <span class="detail-title"><%-m.title %></span>
           <span class="detail-date"><%- m.date %></span>
           <span class="detail-time"><%- m.time %></span>
           <span class="at">@</span>
