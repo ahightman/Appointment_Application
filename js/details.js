@@ -19,11 +19,10 @@ app.showDetailsPage = function (apptId) {
 
     $('.temp').html(temp + "&deg;");
     $('.conditions').html(conditionStr);
-
-
     })
+
     .fail(function(req, status, err) {
-      console.log('Failed to talk to Weather App: ' + err);
+      $('.temp').html('Failed to talk to Weather App: ' + err);
     });
 
   $('.back-to-list').click(app.showListPage);

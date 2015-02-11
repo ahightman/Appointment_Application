@@ -3,6 +3,13 @@ $(function() {
   app.showAddPage = function () {
     var addPageHtml = $('#addpage').html();
     $('.spa-content').html(addPageHtml);
+
+    $('.input-date').pickadate({
+      format: 'mmm dd'
+    });
+
+    $('.input-time').pickatime();
+
     $('.back-to-listpage').click(app.showListPage);
 
     $('.add-form').submit(function () {
