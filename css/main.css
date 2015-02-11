@@ -13,13 +13,12 @@ header {
   color: white;
   padding-bottom: 5%;
   margin-bottom: .5em;
-
+  text-align: center;
 }
 
 .header-title {
   font-size: 2em;
   margin-top: 5%;
-  margin-left: 20%;
   display: inline-block;
   position: relative;
 }
